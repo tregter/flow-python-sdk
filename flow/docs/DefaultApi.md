@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**status**](DefaultApi.md#status) | **GET** /status | Get API status
+[**status**](DefaultApi.md#status) | **GET** /api/status | Get API status
 
 
 # **status**

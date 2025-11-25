@@ -93,7 +93,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**status**](docs/DefaultApi.md#status) | **GET** /status | Get API status
+*DefaultApi* | [**status**](docs/DefaultApi.md#status) | **GET** /api/status | Get API status
 
 
 ## Documentation For Models
