@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,8 +26,9 @@ class StatusResponse(BaseModel):
     """
     StatusResponse
     """ # noqa: E501
-    version: Optional[StrictStr] = Field(default=None, description="The current version of the Flow AI Server.")
-    __properties: ClassVar[List[str]] = ["version"]
+    version: Optional[StrictStr] = None
+    status: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["version", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,7 +81,8 @@ class StatusResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "version": obj.get("version")
+            "version": obj.get("version"),
+            "status": obj.get("status")
         })
         return _obj
 

@@ -5,7 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version** | **str** | The current version of the Flow AI Server. | [optional] 
+**version** | **str** |  | [optional] 
+**status** | **str** |  | [optional] 
 
 ## Example
 

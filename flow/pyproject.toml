@@ -1,6 +1,6 @@
 [project]
 name = "flow"
-version = "1.0.0"
+version = "0.0.1"
 description = "flow ai sdk"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},
