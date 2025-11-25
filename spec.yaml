@@ -12,6 +12,10 @@ tags:
   - name: user
     description: Operations about user
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
   schemas:
     ErrResponse:
       type: object
@@ -31,6 +35,8 @@ components:
           type: string
           description: The current version of the Flow AI Server.
           example: "1.1.0"
+security:
+  - BearerAuth: []
 paths:
   /status:
     get:
