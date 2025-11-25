@@ -12,6 +12,10 @@ tags:
   - name: user
     description: Operations about user
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
   schemas:
     ErrResponse:
       type: object
@@ -31,8 +35,10 @@ components:
           type: string
         status:
           type: string
+security:
+  - BearerAuth: []
 paths:
-  /api/status:
+  /status:
     get:
       summary: Get API status
       operationId: status
