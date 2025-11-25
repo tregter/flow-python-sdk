@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: flow ai sdk
+  description: >-
+    This is the Flow AI SDK, used to interact with a Flow server. Flow is an
+    AI foundational platform that exposes common high-level AI tool functionality.
+  version: 0.0.1
+  license:
+    name: Apache-2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+  - name: user
+    description: Operations about user
+paths:
+  /status:
+    get:
+      summary: Get API status
+      operationId: status
+      responses:
+        "200":
+          description: OK - The API is running and returns the current version.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    description: The current version of the Flow AI Server.
+                    example: "1.1.0"

@@ -1,0 +1,13 @@
+version: "3"
+tasks:
+  default:
+    silent: true
+    cmd: task --list-all
+  gen:
+    silent: true
+    cmd: |
+      openapi-generator generate \
+        --package-name flow \
+        -i spec.yaml \
+        -g python \
+        -o .
