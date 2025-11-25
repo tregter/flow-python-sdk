@@ -38,7 +38,7 @@ components:
 security:
   - BearerAuth: []
 paths:
-  /status:
+  /api/status:
     get:
       summary: Get API status
       operationId: status
