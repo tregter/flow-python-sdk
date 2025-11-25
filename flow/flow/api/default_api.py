@@ -261,11 +261,12 @@ class DefaultApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'BearerAuth'
         ]
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/status',
+            resource_path='/status',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
