@@ -14,7 +14,6 @@ Get API status
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
 
 ```python
 import flow
@@ -28,15 +27,6 @@ configuration = flow.Configuration(
     host = "http://localhost"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure Bearer authorization: BearerAuth
-configuration = flow.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
 
 # Enter a context with an instance of the API client
 with flow.ApiClient(configuration) as api_client:
@@ -64,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+No authorization required
 
 ### HTTP request headers
 
