@@ -89,7 +89,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Status200Response](docs/Status200Response.md)
+ - [ErrResponse](docs/ErrResponse.md)
+ - [StatusResponse](docs/StatusResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

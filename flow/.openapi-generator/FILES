@@ -5,7 +5,8 @@
 .travis.yml
 README.md
 docs/DefaultApi.md
-docs/Status200Response.md
+docs/ErrResponse.md
+docs/StatusResponse.md
 flow/__init__.py
 flow/api/__init__.py
 flow/api/default_api.py
@@ -14,7 +15,8 @@ flow/api_response.py
 flow/configuration.py
 flow/exceptions.py
 flow/models/__init__.py
-flow/models/status200_response.py
+flow/models/err_response.py
+flow/models/status_response.py
 flow/py.typed
 flow/rest.py
 git_push.sh
@@ -25,5 +27,6 @@ setup.py
 test-requirements.txt
 test/__init__.py
 test/test_default_api.py
-test/test_status200_response.py
+test/test_err_response.py
+test/test_status_response.py
 tox.ini

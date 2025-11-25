@@ -11,6 +11,26 @@ info:
 tags:
   - name: user
     description: Operations about user
+components:
+  schemas:
+    ErrResponse:
+      type: object
+      properties:
+        err:
+          type: string
+        msg:
+          type: string
+        fields:
+          type: object
+          additionalProperties:
+            type: string
+    StatusResponse:
+      type: object
+      properties:
+        version:
+          type: string
+          description: The current version of the Flow AI Server.
+          example: "1.1.0"
 paths:
   /status:
     get:
@@ -22,9 +42,10 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  version:
-                    type: string
-                    description: The current version of the Flow AI Server.
-                    example: "1.1.0"
+                $ref: "#/components/schemas/StatusResponse"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrResponse"

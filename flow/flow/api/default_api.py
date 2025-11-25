@@ -16,7 +16,7 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from flow.models.status200_response import Status200Response
+from flow.models.status_response import StatusResponse
 
 from flow.api_client import ApiClient, RequestSerialized
 from flow.api_response import ApiResponse
@@ -51,7 +51,7 @@ class DefaultApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Status200Response:
+    ) -> StatusResponse:
         """Get API status
 
 
@@ -85,7 +85,8 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Status200Response",
+            '200': "StatusResponse",
+            '500': "ErrResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -113,7 +114,7 @@ class DefaultApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Status200Response]:
+    ) -> ApiResponse[StatusResponse]:
         """Get API status
 
 
@@ -147,7 +148,8 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Status200Response",
+            '200': "StatusResponse",
+            '500': "ErrResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -209,7 +211,8 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Status200Response",
+            '200': "StatusResponse",
+            '500': "ErrResponse",
         }
         response_data = self.api_client.call_api(
             *_param,

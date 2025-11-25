@@ -13,5 +13,6 @@
 """  # noqa: E501
 
 # import models into model package
-from flow.models.status200_response import Status200Response
+from flow.models.err_response import ErrResponse
+from flow.models.status_response import StatusResponse
 

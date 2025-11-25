@@ -28,7 +28,8 @@ __all__ = [
     "ApiKeyError",
     "ApiAttributeError",
     "ApiException",
-    "Status200Response",
+    "ErrResponse",
+    "StatusResponse",
 ]
 
 # import apis into sdk package
@@ -46,5 +47,6 @@ from flow.exceptions import ApiAttributeError as ApiAttributeError
 from flow.exceptions import ApiException as ApiException
 
 # import models into sdk package
-from flow.models.status200_response import Status200Response as Status200Response
+from flow.models.err_response import ErrResponse as ErrResponse
+from flow.models.status_response import StatusResponse as StatusResponse
 

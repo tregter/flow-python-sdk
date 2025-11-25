@@ -14,10 +14,10 @@
 
 import unittest
 
-from flow.models.status200_response import Status200Response
+from flow.models.status_response import StatusResponse
 
-class TestStatus200Response(unittest.TestCase):
-    """Status200Response unit test stubs"""
+class TestStatusResponse(unittest.TestCase):
+    """StatusResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,25 +25,25 @@ class TestStatus200Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> Status200Response:
-        """Test Status200Response
+    def make_instance(self, include_optional) -> StatusResponse:
+        """Test StatusResponse
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `Status200Response`
+        # uncomment below to create an instance of `StatusResponse`
         """
-        model = Status200Response()
+        model = StatusResponse()
         if include_optional:
-            return Status200Response(
+            return StatusResponse(
                 version = '1.1.0'
             )
         else:
-            return Status200Response(
+            return StatusResponse(
         )
         """
 
-    def testStatus200Response(self):
-        """Test Status200Response"""
+    def testStatusResponse(self):
+        """Test StatusResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

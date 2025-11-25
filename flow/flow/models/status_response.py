@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class Status200Response(BaseModel):
+class StatusResponse(BaseModel):
     """
-    Status200Response
+    StatusResponse
     """ # noqa: E501
     version: Optional[StrictStr] = Field(default=None, description="The current version of the Flow AI Server.")
     __properties: ClassVar[List[str]] = ["version"]
@@ -47,7 +47,7 @@ class Status200Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of Status200Response from a JSON string"""
+        """Create an instance of StatusResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,7 +72,7 @@ class Status200Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of Status200Response from a dict"""
+        """Create an instance of StatusResponse from a dict"""
         if obj is None:
             return None
 

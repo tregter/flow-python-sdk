@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **status**
-> Status200Response status()
+> StatusResponse status()
 
 Get API status
 
@@ -17,7 +17,7 @@ Get API status
 
 ```python
 import flow
-from flow.models.status200_response import Status200Response
+from flow.models.status_response import StatusResponse
 from flow.rest import ApiException
 from pprint import pprint
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Status200Response**](Status200Response.md)
+[**StatusResponse**](StatusResponse.md)
 
 ### Authorization
 
@@ -66,6 +66,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK - The API is running and returns the current version. |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

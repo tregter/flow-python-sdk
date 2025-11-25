@@ -10,4 +10,4 @@ tasks:
         --package-name flow \
         -i spec.yaml \
         -g python \
-        -o .
+        -o ./flow
